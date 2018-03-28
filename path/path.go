@@ -1,12 +1,10 @@
 package path
 
 import (
-	"bufio"
 	"container/list"
 	"context"
 	"errors"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
