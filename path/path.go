@@ -15,6 +15,7 @@ const (
 	FileNotFound = "File Not Found"
 )
 
+// Exists
 func Exists(file string) (bool, error) {
 	_, err := os.Stat(file)
 	if err != nil {
@@ -198,4 +199,9 @@ func Basename(s string) string {
 	}
 
 	return s
+}
+
+// GetCurDir Get current program directory
+func GetCurDir() (string, error) {
+	return filepath.Abs(filepath.Dir(os.Args[0]))
 }
